@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<link href="style/reset.css" rel="stylesheet" type="text/css">
+<link href="style/columns.css" rel="stylesheet" type="text/css">
+<body>
+<div class="headerBar">
+    <div class="logoBar">
+        <div class="logo loginLogo clearfix">
+            <a href="#" class="fl"><img src="images/logo.png" alt="慕课网"/></a>
+            <h1>欢迎注册</h1>
+        </div>
+    </div>
+</div>
+<div class="formCon formReg">
+    <form class="loginForm regForm">
+        <ul class="regList">
+            <li>
+                <label for="username"><i>*</i>账户名:</label><input type="text" name="username" id="username" placeholder="邮箱/用户名/手机" class="username regName">
+            </li>
+            <li>
+                <label for="password"><i>*</i>请设置密码:</label><input type="password" name="password" id="password" class="password">
+            </li>
+            <li>
+                <label for="passwordConfirm"><i>*</i>请确定密码:</label><input type="password" name="passwordConfirm" id="passwordConfirm" class="password">
+            </li>
+            <li>
+                <label for="email"><i>*</i>邮箱:</label><input type="text" name="email" id="email" class="password">
+            </li>
+            <li>
+                <label for="address"><i>*</i>地址:</label><input type="text" name="address" id="address" class="username regAdd">
+            </li>
+        </ul>
+        <div class="loginOpt agree">
+            <input type="checkbox" checked="checked" id="auto"><label for="auto">我已阅读并同意<a href="javascript:;">《用户注册协议》</a></label>
+        </div>
+        <input type="submit" value="提交" class="loginBtn regBtn">
+    </form>
+</div>
+</body>
+</html>

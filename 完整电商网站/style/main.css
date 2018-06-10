@@ -1,0 +1,495 @@
+/*公用*/
+.comWidth{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.leftArea{
+    float: left;
+}
+
+.rightArea{
+    float: right;
+}
+
+/*topBar*/
+.topBar{
+    height: 31px;
+    background: #f7f7f7;
+    line-height: 31px;
+}
+
+.collection{
+    background: url("../images/icon/collection.jpg") no-repeat left;
+    text-decoration: none;
+    padding-left: 19px;
+    font-weight: bold;
+}
+
+.topBar a:hover{
+    color: red;
+}
+
+/*logo*/
+.logoBar{
+    height: 85px;
+    background: #1d7ad9;
+}
+
+.logo{
+    padding: 13px 0 0 30px;
+}
+
+/*搜索栏*/
+.searchBox{
+    width: 430px;
+    margin: 23px 0 0 185px;
+}
+
+.searchText{
+    width: 350px;
+    height: 35px;
+    line-height: 35px\9;   /* css hack: \9 代表所有IE浏览器*/
+    padding: 0 5px;
+}
+
+.searchBtn{
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #fff;
+    background: #ff8c00;
+}
+
+.searchBtn:hover{
+    color: #1d7ad9;
+}
+
+.searchBtn:active{
+    color: red;
+}
+
+/*购物车*/
+.shopCar{
+    width: 145px;
+    height: 35px;
+    margin: 23px 59px 0 0;
+    background: #ff8c00;
+    font: 14px/35px "Microsoft YaHei";
+}
+
+.shopText{
+    width: 87px;
+    text-indent: 40px;             /*使用text-indent可以避免padding-left抵消掉的长度*/
+    border-right: 1px solid #e27a00;
+    background: url("../images/icon/shopCar.png") no-repeat 10px;
+}
+
+.shopNum{
+    width: 27px;
+    padding-right: 29px;    /*之所以使用padding-right是为了shopNum数字位数增长后使其向左移动*/
+    text-align: right;
+    border-left: 1px solid #ff9c01;
+    background: url("../images/icon/shopNum.png") no-repeat 32px;
+}
+
+.shopText,.shopNum a{
+    color: #fff;
+}
+
+.shopNum a:hover{
+    color: #1d7ad9;
+}
+
+/*导航栏*/
+.navBox{
+    height: 35px;
+    background: #1369c0;
+    color: #fff;
+}
+
+.nav li{
+    float: left;
+}
+
+.nav a{
+    display: block;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.nav a:hover{
+    background: #4593fd;
+}
+
+.shopClass{
+    width: 190px;
+    height: 35px;
+    background: url("../images/icon/shopClass.png") no-repeat 148px;
+    position: relative;
+}
+
+.shopClass h3{
+    text-indent: 39px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.shopClass:hover .shopClassShowAll{
+    display: block;
+}
+
+/*下滑菜单*/
+.shopClassShowAll{
+    position: absolute;
+    display: block; /*改为none可实现下滑菜单*/
+    z-index: 1;
+}
+
+.shopClassShow{
+    width: 189px;
+    height: 5.26em;
+    background: #4593fd;
+    word-spacing: 4px;
+    border-top: 1px solid #5aa1fe;
+    border-bottom: 1px solid #3487f2;
+    border-left: 1px solid #3487f2;
+}
+
+.shopClassShow:hover{
+    background: #fff;
+    width: 189px;
+}
+
+.shopClassShow:hover .shopClassItem dt{
+    background-image: none;
+}
+
+.shopClassShow:hover .shopClassItem a:not(.c){
+    color: #000;
+}
+
+.shopClassItem{
+    width: 170px;
+    padding: 14px 0 0 11px;
+}
+
+.shopClassItem a{
+    color: #c2d9f8;
+}
+
+.shopClassItem dd a:hover,.b:hover{
+    color: #1369c0!important;
+}
+
+.shopClassItem .c:hover{
+    color: #ff9c01;
+}
+
+.shopClassItem .b{
+    color: #fff;
+    font-size: 14px;
+}
+
+.shopClassItem .c{
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    color: #fff;
+    background: url("../images/c.png") no-repeat center;
+    text-align: center;
+    line-height: 20px;
+}
+
+.shopClassItem .c:hover{
+    text-decoration: underline;
+}
+
+.shopClassItem dt{
+    margin-bottom: 2px;
+    background: url("../images/icon/shopClassDt.png") no-repeat right;
+}
+
+/*弹出菜单*/
+.shopClassList{
+    width: 569px;
+    min-height: 379px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    padding-bottom: 10px;
+    left: 189px;
+    position: absolute;
+    display: none;   /*改为none可实现弹出菜单*/
+    z-index: 1;
+}
+
+.shopClassList a:hover{
+    text-decoration: underline;
+}
+
+.shopListItem{
+    width: 533px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.shopListItem dt{
+    padding: 13px 14px 0 0;
+    color: #4b88da;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    float: left;
+}
+
+.shopListItem dd{
+    width: 471px;
+    padding-top: 13px;
+    float: left;
+}
+
+.shopListItem a{
+    display: inline-block;
+    margin-right: 14px;
+    margin-bottom: 10px;
+}
+
+.shopListItem .d{
+    color: #ff7300;
+}
+
+.shopChannel{
+    width: 533px;
+    margin: 0 auto;
+}
+
+.shopListChannel{
+    line-height: 25px;
+    text-indent: 10px;
+    margin: 13px 10px 0 0;
+    padding-right: 10px;
+    float: left;
+    background: #2785e6;
+}
+
+.shopListChannel a{
+    color: #fff;
+}
+
+.shopListChannel img{
+    margin-left: 5px;
+}
+
+.showList{
+    position: relative;
+}
+
+.showList:hover .shopClassList{
+    display: block;
+}
+
+/*banner部分*/
+.banner{
+    float: right;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgBox{
+    position: absolute;
+    left: 0; /*此处用js改变数值产生切图效果，如-810px*/
+    top: 0;
+}
+
+.imgBox li{
+    float: left;
+}
+
+.imgBox img{
+    display: block;
+}
+
+.imgNum{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.imgNum a{
+    width: 20px;
+    height: 5px;
+    margin: 0 1px;
+    display: inline-block;
+    background: #fff;
+}
+
+.imgNum .bannerActive{
+    background: #ff9c01;
+}
+
+.bannerBig,.bannerBig img{
+    width: 811px;
+    height: 326px;
+}
+
+.bannerBig .imgBox{
+    width: 1622px;
+    height: 326px;
+}
+
+.bannerSmall,.bannerSmall img{
+    width: 190px;
+    height: 400px;
+}
+
+.bannerSmall .imgBox{
+    width: 380px;
+    height: 400px;
+}
+
+/*商品标题*/
+.shopTit{
+    height: 45px;
+    line-height: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.shopTit h3{
+    font-size: 24px;
+    float: left;
+    font-weight: normal;
+    padding-left: 15px;
+}
+
+.icon{
+    width: 44px;
+    height: 45px;
+    float: left;
+    background: url("../images/icon/icon.png") no-repeat;
+}
+
+.more{
+    float: right;
+    padding-top: 16px;
+}
+
+.more:hover{
+    text-decoration: underline;
+}
+
+/*商品列表*/
+.shopList .leftArea{
+    width: 190px;
+}
+
+.shopList .rightArea{
+    width: 810px;
+    height: 396px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 3px solid #ff9c01;
+}
+
+/*商品列表上*/
+.shopItem{
+    width: 201.5px;
+    height: 279px;
+    text-align: center;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    float: left;
+}
+
+.shopImg{
+    padding-top: 46px;
+}
+
+.shopItem h3{
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.shopItem p{
+    color: #ff9c01;
+    font-size: 14px;
+}
+
+/*商品列表下*/
+.shopItemBtm{
+    width: 201.5px;
+    height: 116px;
+    border-right: 1px solid #e5e5e5;
+    float: left;
+}
+
+.shopImgBtm{
+    width: 90px;
+    height: 86px;
+    line-height: 86px;
+    text-align: center;
+    padding-top: 15px;
+    float: left;
+}
+
+.shopImgBtm img{
+    vertical-align: middle;
+}
+
+.shopTextBtm{
+    width: 107px;
+    padding-top: 28px;
+    float: left;
+}
+
+.shopTextBtm p{
+    font-size: 12px;
+    line-height: 19px;
+    color: #ff9c01;
+}
+
+.shopTextBtm h3{
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: normal;
+    text-indent: 12px;
+    background: url("../images/icon/money.png") no-repeat left;
+}
+
+/*底部*/
+.footer{
+    height: 223px;
+    background: #d4d4d4;
+    padding-top: 55px;
+    margin-top: 40px;
+}
+
+.footer p{
+    text-align: center;
+    line-height: 26px;
+}
+
+.footer a{
+    color: #000;
+}
+
+.footer a:hover{
+    color: red;
+}
+
+.footer div{
+    text-align: center;
+    margin-top: 38px;
+}
+
+.footer img{
+    margin: 0 12px;
+}
