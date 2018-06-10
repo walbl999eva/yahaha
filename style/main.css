@@ -1,495 +1,729 @@
 /*公用*/
-.comWidth{
+.comWidth
+{
     width: 1000px;
     margin: 0 auto;
 }
 
-.leftArea{
+.leftArea
+{
     float: left;
 }
 
-.rightArea{
+.rightArea
+{
     float: right;
 }
 
 /*topBar*/
-.topBar{
-    height: 31px;
-    background: #f7f7f7;
+.topBar
+{
     line-height: 31px;
+
+    height: 31px;
+
+    background: #f7f7f7;
 }
 
-.collection{
-    background: url("../images/icon/collection.jpg") no-repeat left;
-    text-decoration: none;
-    padding-left: 19px;
+.collection
+{
     font-weight: bold;
+
+    padding-left: 19px;
+
+    text-decoration: none;
+
+    background: url('../images/icon/collection.jpg') no-repeat left;
 }
 
-.topBar a:hover{
+.topBar a:hover
+{
     color: red;
 }
 
 /*logo*/
-.logoBar{
+.logoBar
+{
     height: 85px;
+
     background: #1d7ad9;
 }
 
-.logo{
+.logo
+{
     padding: 13px 0 0 30px;
 }
 
 /*搜索栏*/
-.searchBox{
+.searchBox
+{
     width: 430px;
     margin: 23px 0 0 185px;
 }
 
-.searchText{
+.searchText
+{
+    line-height: 35px\9;   /* css hack: \9 代表所有IE浏览器*/
+
     width: 350px;
     height: 35px;
-    line-height: 35px\9;   /* css hack: \9 代表所有IE浏览器*/
     padding: 0 5px;
 }
 
-.searchBtn{
+.searchBtn
+{
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+
     width: 70px;
     height: 35px;
-    font-size: 14px;
-    font-family: "Microsoft YaHei";
+
+    cursor: pointer;
+
     color: #fff;
     background: #ff8c00;
 }
 
-.searchBtn:hover{
-    color: #1d7ad9;
+.searchBtn:hover
+{
+    box-shadow: 1px 1px 1px 0 #cfb7b7;
 }
 
-.searchBtn:active{
+.searchBtn:active
+{
     color: red;
 }
 
 /*购物车*/
-.shopCar{
+.shopCar
+{
+    font: 14px/35px 'Microsoft YaHei';
+
     width: 145px;
     height: 35px;
     margin: 23px 59px 0 0;
+
     background: #ff8c00;
-    font: 14px/35px "Microsoft YaHei";
 }
 
-.shopText{
+.shopText
+{
     width: 87px;
+
     text-indent: 40px;             /*使用text-indent可以避免padding-left抵消掉的长度*/
+
     border-right: 1px solid #e27a00;
-    background: url("../images/icon/shopCar.png") no-repeat 10px;
+    background: url('../images/icon/shopCar.png') no-repeat 10px;
 }
 
-.shopNum{
+.shopNum
+{
     width: 27px;
     padding-right: 29px;    /*之所以使用padding-right是为了shopNum数字位数增长后使其向左移动*/
+
     text-align: right;
+
     border-left: 1px solid #ff9c01;
-    background: url("../images/icon/shopNum.png") no-repeat 32px;
+    background: url('../images/icon/shopNum.png') no-repeat 32px;
 }
 
-.shopText,.shopNum a{
+.shopText,
+.shopNum a
+{
     color: #fff;
 }
 
-.shopNum a:hover{
+.shopNum a:hover
+{
     color: #1d7ad9;
 }
 
 /*导航栏*/
-.navBox{
+.navBox
+{
+    position: relative;
+    z-index: 1;
+
     height: 35px;
-    background: #1369c0;
+
     color: #fff;
+    background: #1369c0;
+    box-shadow: -2px 3px 3px #1413133d;
 }
 
-.nav li{
+.nav li
+{
     float: left;
 }
 
-.nav a{
+.nav a
+{
+    font-size: 14px;
+    line-height: 35px;
+
     display: block;
+
     width: 100px;
     height: 35px;
-    line-height: 35px;
+
     text-align: center;
-    color: #fff;
-    font-size: 14px;
     letter-spacing: 2px;
+
+    color: #fff;
 }
 
-.nav a:hover{
+.nav a:hover
+{
     background: #4593fd;
 }
 
-.shopClass{
+.shopClass
+{
+    position: relative;
+
     width: 190px;
     height: 35px;
-    background: url("../images/icon/shopClass.png") no-repeat 148px;
-    position: relative;
+
+    background: url('../images/icon/shopClass.png') no-repeat 148px;
 }
 
-.shopClass h3{
-    text-indent: 39px;
+.shopClass h3
+{
     line-height: 35px;
-    letter-spacing: 2px;
+
     cursor: pointer;
+    text-indent: 39px;
+    letter-spacing: 2px;
 }
 
-.shopClass:hover .shopClassShowAll{
+.shopClass h3 a
+{
+    color: white;
+}
+
+.shopClass h3 a:hover
+{
+    text-decoration: underline;
+}
+
+.shopClass:hover .shopClassShowAll
+{
     display: block;
 }
 
 /*下滑菜单*/
-.shopClassShowAll{
+.shopClassShowAll
+{
     position: absolute;
-    display: block; /*改为none可实现下滑菜单*/
     z-index: 1;
+
+    display: block; /*改为none可实现下滑菜单*/
 }
 
-.shopClassShow{
+.shopClassShow
+{
     width: 189px;
     height: 5.26em;
-    background: #4593fd;
+
     word-spacing: 4px;
+
     border-top: 1px solid #5aa1fe;
     border-bottom: 1px solid #3487f2;
     border-left: 1px solid #3487f2;
+    background: #4593fd;
 }
 
-.shopClassShow:hover{
-    background: #fff;
+.shopClassShow span
+{
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    width: 20px;
+    height: 5.26em;
+
+    background-color: #fff;
+}
+
+.shopClassShow:hover span
+{
+    display: block;
+}
+
+.shopClassShow:hover
+{
+    z-index: 3;
+
     width: 189px;
+
+    background: #fff;
+    box-shadow: 3px 1px 8px #3c38384a;
 }
 
-.shopClassShow:hover .shopClassItem dt{
+.shopClassShow:hover .shopClassItem dt
+{
     background-image: none;
 }
 
-.shopClassShow:hover .shopClassItem a:not(.c){
+.shopClassShow:hover .shopClassItem a:not(.c)
+{
     color: #000;
 }
 
-.shopClassItem{
+.shopClassItem
+{
     width: 170px;
     padding: 14px 0 0 11px;
 }
 
-.shopClassItem a{
+.shopClassItem a
+{
     color: #c2d9f8;
 }
 
-.shopClassItem dd a:hover,.b:hover{
+.shopClassItem dd a:hover,
+.b:hover
+{
     color: #1369c0!important;
 }
 
-.shopClassItem .c:hover{
+.shopClassItem .c:hover
+{
     color: #ff9c01;
 }
 
-.shopClassItem .b{
-    color: #fff;
+.shopClassItem .b
+{
     font-size: 14px;
+
+    color: #fff;
 }
 
-.shopClassItem .c{
+.shopClassItem .c
+{
+    line-height: 20px;
+
     display: inline-block;
+
     width: 48px;
     height: 20px;
-    color: #fff;
-    background: url("../images/c.png") no-repeat center;
+
     text-align: center;
-    line-height: 20px;
+
+    color: #fff;
+    background: url('../images/c.png') no-repeat center;
 }
 
-.shopClassItem .c:hover{
+.shopClassItem .c:hover
+{
     text-decoration: underline;
 }
 
-.shopClassItem dt{
+.shopClassItem dt
+{
     margin-bottom: 2px;
-    background: url("../images/icon/shopClassDt.png") no-repeat right;
+
+    background: url('../images/icon/shopClassDt.png') no-repeat right;
 }
 
 /*弹出菜单*/
-.shopClassList{
+.shopClassList
+{
+    position: absolute;
+    z-index: 1;
+    top: -1px;
+    left: 175px;
+
+    display: none;   /*改为none可实现弹出菜单*/
+
     width: 569px;
     min-height: 379px;
-    border: 1px solid #dddddd;
-    background: #ffffff;
     padding-bottom: 10px;
-    left: 189px;
-    position: absolute;
-    display: none;   /*改为none可实现弹出菜单*/
-    z-index: 1;
+
+    border: 1px solid #5aa1fe;
+    background: #fff;
+    box-shadow: 1px 1px 2px #7d7676b3;
 }
 
-.shopClassList a:hover{
+.shopClassList a:hover
+{
     text-decoration: underline;
 }
 
-.shopListItem{
+.shopListItem
+{
     width: 533px;
     margin: 0 auto;
+
     border-bottom: 1px solid #e5e5e5;
 }
 
-.shopListItem dt{
-    padding: 13px 14px 0 0;
-    color: #4b88da;
+.shopListItem dt
+{
+    font-family: 'Microsoft YaHei';
     font-weight: bold;
-    font-family: "Microsoft YaHei";
+
     float: left;
+
+    padding: 13px 14px 0 0;
+
+    color: #4b88da;
 }
 
-.shopListItem dd{
+.shopListItem dd
+{
+    float: left;
+
     width: 471px;
     padding-top: 13px;
-    float: left;
 }
 
-.shopListItem a{
+.shopListItem a
+{
     display: inline-block;
+
     margin-right: 14px;
     margin-bottom: 10px;
 }
 
-.shopListItem .d{
+.shopListItem .d
+{
     color: #ff7300;
 }
 
-.shopChannel{
+.shopChannel
+{
     width: 533px;
     margin: 0 auto;
 }
 
-.shopListChannel{
+.shopListChannel
+{
     line-height: 25px;
-    text-indent: 10px;
+
+    float: left;
+
     margin: 13px 10px 0 0;
     padding-right: 10px;
-    float: left;
+
+    text-indent: 10px;
+
     background: #2785e6;
 }
 
-.shopListChannel a{
+.shopListChannel a
+{
     color: #fff;
 }
 
-.shopListChannel img{
+.shopListChannel img
+{
     margin-left: 5px;
 }
 
-.showList{
+.showList
+{
     position: relative;
 }
 
-.showList:hover .shopClassList{
+.showList:hover .shopClassList
+{
     display: block;
 }
 
 /*banner部分*/
-.banner{
-    float: right;
+.banner
+{
     position: relative;
+
+    float: right;
     overflow: hidden;
 }
 
-.imgBox{
+.imgBox
+{
     position: absolute;
-    left: 0; /*此处用js改变数值产生切图效果，如-810px*/
     top: 0;
+    left: 0; /*此处用js改变数值产生切图效果，如-810px*/
 }
 
-.imgBox li{
+.imgBox li
+{
     float: left;
 }
 
-.imgBox img{
+.imgBox img
+{
     display: block;
 }
 
-.imgNum{
+.imgNum
+{
     position: absolute;
-    left: 0;
     bottom: 10px;
+    left: 0;
+
     width: 100%;
+
     text-align: center;
 }
 
-.imgNum a{
+.imgNum a
+{
+    display: inline-block;
+
     width: 20px;
     height: 5px;
     margin: 0 1px;
-    display: inline-block;
+
     background: #fff;
 }
 
-.imgNum .bannerActive{
+.imgNum .bannerActive
+{
     background: #ff9c01;
 }
 
-.bannerBig,.bannerBig img{
+.bannerBig,
+.bannerBig img
+{
     width: 811px;
     height: 326px;
 }
 
-.bannerBig .imgBox{
+.bannerBig .imgBox
+{
     width: 1622px;
     height: 326px;
 }
 
-.bannerSmall,.bannerSmall img{
+.bannerSmall,
+.bannerSmall img
+{
     width: 190px;
     height: 400px;
 }
 
-.bannerSmall .imgBox{
+.bannerSmall .imgBox
+{
     width: 380px;
     height: 400px;
 }
 
 /*商品标题*/
-.shopTit{
-    height: 45px;
+.shopTit
+{
     line-height: 45px;
+
+    overflow: hidden;
+
+    height: 45px;
     margin-top: 15px;
     margin-bottom: 15px;
-    overflow: hidden;
 }
 
-.shopTit h3{
+.shopTit h3 a
+{
     font-size: 24px;
-    float: left;
     font-weight: normal;
+
+    float: left;
+
     padding-left: 15px;
+
+    color: #000;
 }
 
-.icon{
+.shopTit h3 a:hover
+{
+    text-shadow: 1px 2px #ccc1c1;
+}
+
+.icon
+{
+    float: left;
+
     width: 44px;
     height: 45px;
-    float: left;
-    background: url("../images/icon/icon.png") no-repeat;
+
+    background: url('../images/icon/icon.png') no-repeat;
 }
 
-.more{
+.more
+{
     float: right;
+
     padding-top: 16px;
 }
 
-.more:hover{
+.more:hover
+{
     text-decoration: underline;
 }
 
 /*商品列表*/
-.shopList .leftArea{
+.shopList
+{
+    box-shadow: 1px -3px 4px #aca5a552;
+}
+.shopList .leftArea
+{
     width: 190px;
 }
 
-.shopList .rightArea{
+.shopList .rightArea
+{
     width: 810px;
     height: 396px;
+
     border-top: 1px solid #e5e5e5;
     border-bottom: 3px solid #ff9c01;
 }
 
 /*商品列表上*/
-.shopItem{
+.shopItem
+{
+    float: left;
+
     width: 201.5px;
     height: 279px;
+
     text-align: center;
+
     border-right: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    float: left;
 }
 
-.shopImg{
+.shopItem p
+{
+    cursor: pointer;
+}
+
+.shopItem p:hover
+{
+    text-decoration: underline;
+}
+
+.shopImg
+{
     padding-top: 46px;
 }
 
-.shopItem h3{
-    margin-top: 25px;
+.shopItem h3
+{
     font-size: 16px;
+
+    margin-top: 25px;
 }
 
-.shopItem p{
-    color: #ff9c01;
+.shopItem p
+{
     font-size: 14px;
+
+    color: #ff9c01;
 }
 
 /*商品列表下*/
-.shopItemBtm{
+.shopItemBtm
+{
+    float: left;
+
     width: 201.5px;
     height: 116px;
+
     border-right: 1px solid #e5e5e5;
-    float: left;
 }
 
-.shopImgBtm{
+.shopImgBtm
+{
+    line-height: 86px;
+
+    float: left;
+
     width: 90px;
     height: 86px;
-    line-height: 86px;
-    text-align: center;
     padding-top: 15px;
-    float: left;
+
+    text-align: center;
 }
 
-.shopImgBtm img{
+.shopImgBtm img
+{
     vertical-align: middle;
 }
 
-.shopTextBtm{
+.shopTextBtm
+{
+    float: left;
+
     width: 107px;
     padding-top: 28px;
-    float: left;
 }
 
-.shopTextBtm p{
+.shopTextBtm p
+{
     font-size: 12px;
     line-height: 19px;
+
     color: #ff9c01;
 }
 
-.shopTextBtm h3{
-    line-height: 28px;
+.shopTextBtm p a
+{
+    text-decoration: underline;
+
+    color: #ff9c01;
+}
+
+.shopTextBtm h3
+{
     font-size: 16px;
     font-weight: normal;
+    line-height: 28px;
+
     text-indent: 12px;
-    background: url("../images/icon/money.png") no-repeat left;
+
+    background: url('../images/icon/money.png') no-repeat left;
 }
 
 /*底部*/
-.footer{
+.footer
+{
     height: 223px;
-    background: #d4d4d4;
-    padding-top: 55px;
     margin-top: 40px;
+    padding-top: 55px;
+
+    background: #d4d4d4;
 }
 
-.footer p{
-    text-align: center;
+.footer p
+{
     line-height: 26px;
+
+    text-align: center;
 }
 
-.footer a{
+.footer a
+{
     color: #000;
 }
 
-.footer a:hover{
+.footer a:hover
+{
     color: red;
 }
 
-.footer div{
-    text-align: center;
+.footer div
+{
     margin-top: 38px;
+
+    text-align: center;
 }
 
-.footer img{
+.footer img
+{
     margin: 0 12px;
 }
